@@ -1,0 +1,22 @@
+
+
+<div *ngFor="let item of items" calss="gridcomp" style="float:left;width:50%" >
+<ej-grid  id="Grid" [dataSource]="gridData1" [allowRowDragAndDrop]="item.allowRowDragAndDrop" [rowDropSettings.dropTargetID]="item.gridid" [allowPaging]="true" > >
+    <e-columns>
+        <e-column field="EmployeeID"  headerText="Employee ID" textAlign="right"></e-column>
+        <e-column field="OrderID" [isPrimaryKey]="true"  textAlign="right"></e-column>
+        <e-column field="CustomerID" headerText="Customer ID" textAlign="right"></e-column>
+		
+    </e-columns>
+</ej-grid>
+    </div>
+<div class="gridcomp2" style="float:right;width:49%">
+    <ej-grid id="Grid23" [dataSource]="datag" [allowPaging]="true" [allowRowDragAndDrop]="true" [rowDropSettings.dropTargetID]="gridsecond" >
+        <e-columns>
+            <e-column field="EmployeeID"  headerText="Employee ID" textAlign="right"></e-column>
+            <e-column field="OrderID"  headerText="Order ID" textAlign="right"></e-column>
+            <e-column field="CustomerID" headerText="Customer ID" textAlign="right"></e-column>
+        </e-columns>
+    </ej-grid>
+
+</div>

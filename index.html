@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head> 
+    <title>Essential JavaScript for Angular 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//cdn.syncfusion.com/15.1.0.37/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="//cdn.syncfusion.com/js/assets/external/jquery-3.0.0.min.js"></script>
+    <script src="//cdn.syncfusion.com/js/assets/external/jquery.validate.min.js"></script>
+    <script src="//cdn.syncfusion.com/js/assets/external/jsrender.min.js"></script>
+    <script src="//cdn.syncfusion.com/15.1.0.37/js/web/ej.web.all.js"></script> 
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>       
+      System.import('app')
+            .then(null, console.error.bind(console));
+    </script>
+	
+
+</head>
+
+<!-- 3. Display the application -->
+
+<body>
+    <ej-app>Loading...</ej-app>
+
+ <div id="template" style="display: none">
+                    <b>Order Details</b>
+                    <table cellspacing="10">
+                        <tr>
+                            <td style="text-align: right;">Order ID
+                            </td>
+                            <td style="text-align: left">
+                                <input id="OrderID" name="OrderID" value="{{: OrderID}}" disabled="disabled"  class="e-field e-ejinputtext valid e-disable" style="text-align: right; width: 116px; height: 28px" />
+                            </td>
+							<td style="text-align: right;">Customer ID
+                            </td>
+                            <td style="text-align: left">
+                                <input id="CustomerID" name="CustomerID" value="{{: CustomerID}}" class="e-field e-ejinputtext valid" style="width: 116px; height: 28px" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Freight
+                            </td>
+                            <td style="text-align: left">
+                                <input type="text" id="Freight" name="Freight" value="{{:Freight}}" />
+                            </td>
+							 <td style="text-align: right;">Ship Country
+                            </td>
+                            <td style="text-align: left">
+                                <select id="ShipCountry" name="ShipCountry">
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Austria">Austria</option>
+                                    <option value="Belgium">Belgium</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Denmark">Denmark</option>
+                                    <option value="Finland">Finland</option>
+                                    <option value="France">France</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Ireland">Ireland</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Mexico">Mexico</option>
+                                    <option value="Norway">Norway</option>
+                                    <option value="Poland">Poland</option>
+                                    <option value="Portugal">Portugal</option>
+                                    <option value="Spain">Spain</option>
+                                    <option value="Sweden">Sweden</option>
+                                    <option value="Switzerland">Switzerland</option>
+                                    <option value="UK">UK</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Venezuela">Venezuela</option>
+                                </select>
+                            </td>
+                        </tr>                      
+                        <tr>
+                            <td style="text-align: right;">Ship City
+                            </td>
+                            <td style="text-align: left">
+                                <input id="ShipCity" name="ShipCity" value="{{: ShipCity}}" class="e-field e-ejinputtext valid" style="width: 116px; height: 28px" />
+                            </td>
+							<td style="text-align: right;">Ship Name
+                            </td>
+                            <td style="text-align: left">
+                                <input id="ShipName" name="ShipName" value="{{: ShipName}}" class="e-field e-ejinputtext valid" style="width: 116px; height: 28px" />
+                            </td>
+                        </tr>
+						<tr>
+                            <td style="text-align: right;">Ship Address
+                            </td>
+                            <td style="text-align: left">
+                                <textarea id="ShipAddress" name="ShipAddress" class="e-ejinputtext"  value="{{: ShipAddress}}" >{{: ShipAddress}}</textarea>
+                            </td>
+					    </tr>
+                    </table>
+                </div>
+            </div>
+			<style type="text/css">
+			.e-grid .e-alt_row {
+				background: lightyellow ;
+			}
+			</style>
+			
+</body>
+
+
+
+</html>
